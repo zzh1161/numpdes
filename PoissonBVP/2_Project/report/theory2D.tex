@@ -1,0 +1,189 @@
+% !TEX program = xelatex
+\documentclass[a4paper,11.5pt,UTF8]{ctexart}
+\usepackage{a4}
+\usepackage{amsmath, amssymb, amsthm, graphicx, xspace,array,url}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{listings,color,xcolor,fontspec}
+
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\title{Theoretical Analysis for 2D Method}
+\author{张卓涵 3190101161}
+\usepackage[a4paper,left=20mm,right=20mm,top=30mm,bottom=20mm]{geometry}
+
+\newtheorem{example}{例}[section]
+\newtheorem*{remark}{注}
+\newtheorem{thm}{定理}[section]
+\newtheorem{lemma}{引理}[section]
+\newtheorem{define}{定义}[section]
+\newtheorem{corollary}{推论}[section]
+
+\begin{document}
+\begin{figure}[t]
+\begin{minipage}[h]{0.25\linewidth}
+	\includegraphics[width=4.0cm]{./figure/ZJU2.jpeg}
+\end{minipage}
+\hfill
+\begin{minipage}[h]{.7\linewidth}
+	\begin{flushright}
+			\Large{微分方程数值解
+				\vspace{3mm}	\\
+				   2022 夏
+				\vspace{3mm}	\\
+				   张卓涵 \hspace{3mm}3190101161}
+	\end{flushright}
+\end{minipage}
+\rule{\linewidth}{0.1em}
+\end{figure}
+\begin{center}
+	\huge{\textbf{Theoretical Analysis for 2D Method}}
+\end{center}
+\begin{large}
+	
+\section{Question}
+\par 考虑二维Dirichlet边值条件的BVP：
+\begin{equation}
+	\begin{cases}
+		-\Delta u = f, & in\ \Omega:=(0,1)^2 \\
+		u = 0, & on\ \partial\Omega
+	\end{cases}
+	\label{BVP}
+\end{equation}
+
+	
+\section{Relaxation}
+\begin{thm}
+	二维BVP求解中的线性方程组系数矩阵$A_{2D} = I\otimes A + A\otimes I$，其中$A$是一维Dirichlet边值条件BVP线性系统的系数矩阵.并且$A_{2D}$的特征值和特征向量是
+	$$\lambda_{ij}=\lambda_i+\lambda_j,\quad \mathbf{W}_{ij}=\mathbf{w}_j\otimes\mathbf{w}_i$$
+	其中$\lambda_i$和$\lambda_j$是A的特征值，$\mathbf{w}_i$和$\mathbf{w}_j$是对应的特征向量.
+\end{thm}
+\begin{proof}
+	这直接由讲义中的Theorem 7.48和Theorem 7.51得到.
+\end{proof}
+
+\begin{thm}
+	\eqref{BVP}对应的线性系统的加权Jacobi迭代矩阵是
+	$$T_{\omega} = (1-\omega)I+\omega D^{-1}(L+U) = I-\frac{\omega h^2}{4}A_{2D}$$
+	其特征向量就是$A_{2D}$的特征向量，对应的特征值是
+	$$\lambda_{ij} = 1-\omega\sin^2(\frac{i\pi}{2n})-\omega\sin^2(\frac{j\pi}{2n})$$
+\end{thm}
+\begin{proof}
+	这由讲义Lemma 9.16直接得到.
+\end{proof}
+
+\section{Restriction and prolongation}
+\begin{lemma}
+	二维网格的full weighting算子和linear算子满足
+	$$I_{h(2D)}^{2h} = I^{2h}_{h}\otimes I^{2h}_{h},\quad I_{2h(2D)}^{h}=I^{h}_{2h}\otimes I^{h}_{2h}$$
+	其中$I_{h}^{2h}$和$I_{2h}^{h}$分别时一维的full weighting算子和linear算子.
+\end{lemma}
+\begin{example}
+	考虑在$n=3$的情况，我们有二维full weighting算子为
+	\begin{align*}
+		I^{2h}_{h(2D)} &= \frac{1}{16}\begin{bmatrix}
+			-1 & 2 & -1 & -2 & 4 & -2 & -1 & 2 & -1 
+		\end{bmatrix} \\
+		&= \frac{1}{4}\begin{bmatrix} -1 & 2 & -1 \end{bmatrix} \otimes
+		   \frac{1}{4}\begin{bmatrix} -1 & 2 & -1 \end{bmatrix} \\
+		&= I^{2h}_{h}\otimes I^{2h}_{h}
+	\end{align*}
+\end{example}
+
+\section{Two-grid correction}
+\begin{lemma}
+	二维的Two-grid correction作用在误差向量上的迭代矩阵是
+	$$TG=T_{\omega}^{\nu_2}[I_{2D}-I^{h}_{2h(2D)}(A^{2h}_{2D})^{-1}I^{2h}_{h(2D)}A^h_{2D}]T_{\omega}^{\nu_1}$$
+\end{lemma}
+\begin{proof}
+	这由讲义Lemma 9.31推广得到.
+\end{proof}
+
+\section{The spectral picture}
+\begin{lemma}
+	full weighting restriction算子作用在$A_{2D}^{h}$的特征向量$\mathbf{W}_{ij}^{h}$上得到
+	\begin{align*}
+		I^{2h}_{h(2D)}\mathbf{W}_{ij}^{h} := c_ic_j\mathbf{W}_{ij}^{2h} = \cos^2\frac{i\pi}{2n}\cos^2\frac{j\pi}{2n}\mathbf{W}_{ij}^{2h}
+	\end{align*}
+\end{lemma}
+\begin{proof}
+	\begin{align*}
+		I^{2h}_{h(2D)}\mathbf{W}_{ij}^{h} &= (I^{2h}_h\otimes I^{2h}_h)\cdot(\mathbf{w}_j^h\otimes\mathbf{w}_i^h) \\
+		&= (I^{2h}_{h}\mathbf{w}_{j}^{h})\otimes(I^{2h}_{h}\mathbf{w}_{i}^{h}) \\
+		&= (c_i\mathbf{w}_{j}^{2h})\otimes(c_j\mathbf{w}_{i}^{2h}) \\
+		&= c_ic_j\mathbf{W}_{ij}^{2h}
+	\end{align*}
+	这里第三步是由讲义Lemma 9.38得到.
+\end{proof}
+
+\begin{lemma}
+	linear interpolation算子作用在$A_{2D}^{h}$的特征向量$\mathbf{W}_{ij}^{h}$上得到
+	$$I^h_{2h(2D)}\mathbf{W}_{ij}^{2h} = c_ic_j\mathbf{W}_{ij}^h-c_is_j\mathbf{W}_{ij'}^h-c_js_i\mathbf{W}_{i'j}^h+s_is_j\mathbf{W}_{i'j'}^h$$
+	其中，$c_i = \cos^2\frac{i\pi}{2n}$，$s_i=\sin^2\frac{i\pi}{2n}$，$i'=n-i$，$j'=n-j$.
+\end{lemma}
+\begin{proof}
+	\begin{align*}
+		I^h_{2h(2D)}\mathbf{W}_{ij}^{2h} &= (I^h_{2h}\otimes I^h_{2h})\cdot(\mathbf{w}_{j}^{2h}\otimes\mathbf{w}_{i}^{2h}) \\
+		&= (I^h_{2h}\mathbf{w}_{j}^{2h})\otimes(I^h_{2h}\mathbf{w}_{i}^{2h}) \\
+		&= (c_j\mathbf{w}_{j}^{2h}-s_j\mathbf{w}_{j'}^h)\otimes(c_i\mathbf{w}_{i}^{2h}-s_i\mathbf{w}_{i'}^h) \\
+		&= c_ic_j\mathbf{W}_{ij}^h-c_is_j\mathbf{W}_{ij'}^h-c_js_i\mathbf{W}_{i'j}^h+s_is_j\mathbf{W}_{i'j'}^h
+	\end{align*}
+	这里第三个等号由讲义Lemma 9.39得到.
+\end{proof}
+
+\begin{thm}
+	Two-grid correction作用在子空间$span\{\mathbf{W}_{ij}^{h},\mathbf{W}_{i'j}^{h},\mathbf{W}_{ij'}^{h},\mathbf{W}_{i'j'}^{h}\}$上是不变的，且
+	\begin{align*}
+		TG\mathbf{W}_{ij}^{h} &= \lambda_{ij}^{\nu_1+\nu_2}\left(1-\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_ic_j\right)\mathbf{W}_{ij} + \lambda_{ij}^{\nu_1}\lambda_{ij'}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_is_j\mathbf{W}_{ij'}^{h} \\ &+ \lambda_{ij}^{\nu_1}\lambda_{i'j}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_js_i\mathbf{W}_{i'j}^{h} - \lambda_{ij}^{\nu_1}\lambda_{i'j'}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}s_is_j\mathbf{W}_{i'j'}^{h}
+	\end{align*}
+	其中，$\lambda_{ij}=1-\omega\sin^2(\frac{i\pi}{2n})-\omega\sin^2(\frac{j\pi}{2n})$是$T_{\omega}$的特征值，$\chi_i=\sin^2\frac{i\pi}{n}$，$\chi_j=\sin^2\frac{j\pi}{n}$.
+\end{thm}
+\begin{proof}
+	首先不考虑relaxation过程，即假设$\nu_1=\nu_2=0$，
+	\begin{align*}
+		&A^h_{2D}\mathbf{W}_{ij}^h=\frac{4}{h^2}(s_i+s_j)\mathbf{W}_{ij}^h \\
+		\implies& I^{2h}_{h(2D)}A^h_{2D}\mathbf{W}_{ij}^h=\frac{4}{h^2}(s_i+s_j)c_ic_j\mathbf{W}_{ij}^{2h} \\
+		\implies& (A^{2h}_{2D})^{-1}I^{2h}_{h(2D)}A^h_{2D}\mathbf{W}_{ij}^h=\frac{h^2}{\chi_i+\chi_j}\frac{4}{h^2}(s_i+s_j)c_ic_j\mathbf{W}_{ij}^{2h}=\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}\mathbf{W}_{ij}^{2h} \\
+		\implies& I_{2h(2D)}^{h}(A^{2h}_{2D})^{-1}I^{2h}_{h(2D)}A^h_{2D}\mathbf{W}_{ij}^h=\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}[c_ic_j\mathbf{W}_{ij}^h-c_is_j\mathbf{W}_{ij'}^h-c_js_i\mathbf{W}_{i'j}^h+s_is_j\mathbf{W}_{i'j'}^h] \\
+		\implies& [I-I_{2h(2D)}^{h}(A^{2h}_{2D})^{-1}I^{2h}_{h(2D)}A^h_{2D}]\mathbf{W}_{ij}^h=\left(1-\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_ic_j\right)\mathbf{W}_{ij}^h \\
+		&+ \frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_is_j\mathbf{W}_{ij'}^{h} + \frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_js_i\mathbf{W}_{i'j}^{h} - \frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}s_is_j\mathbf{W}_{i'j'}^{h}
+	\end{align*}
+	其中第二步和第四步来自上述两个引理，考虑上smoothing的过程得到：
+	\begin{align*}
+	TG\mathbf{W}_{ij}^{h} &= \lambda_{ij}^{\nu_1+\nu_2}\left(1-\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_ic_j\right)\mathbf{W}_{ij}^h + \lambda_{ij}^{\nu_1}\lambda_{ij'}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_is_j\mathbf{W}_{ij'}^{h} \\ &+ \lambda_{ij}^{\nu_1}\lambda_{i'j}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}c_js_i\mathbf{W}_{i'j}^{h} - \lambda_{ij}^{\nu_1}\lambda_{i'j'}^{\nu_2}\frac{\chi_ic_j+\chi_jc_i}{\chi_i+\chi_j}s_is_j\mathbf{W}_{i'j'}^{h}
+	\end{align*}
+\end{proof}
+\begin{remark}
+	对$TG\mathbf{W}_{ij}^h$中$\mathbf{W}_{ij}^h$，$\mathbf{W}_{ij'}^h$，$\mathbf{W}_{i'j}^h$，$\mathbf{W}_{i'j'}^h$四项的系数讨论知，四个系数均充分小于$1$.
+\end{remark}
+
+\begin{corollary}
+	类似上述讨论，$TG$作用在$\mathbf{W}_{ij'}^h$，$\mathbf{W}_{i'j}^h$，$\mathbf{W}_{i'j'}^h$上也有四项系数充分小于$1$，即：
+	\begin{align*}
+	TG\begin{bmatrix}
+		\mathbf{W}_{ij}^h \\
+		\mathbf{W}_{ij'}^h \\
+		\mathbf{W}_{i'j}^h \\
+		\mathbf{W}_{i'j'}^h
+	\end{bmatrix}=\begin{bmatrix}
+		k_{11} & k_{12} & k_{13} & k_{14} \\
+		k_{21} & k_{22} & k_{23} & k_{24} \\
+		k_{31} & k_{32} & k_{33} & k_{34} \\
+		k_{41} & k_{42} & k_{43} & k_{44} 
+	\end{bmatrix} \begin{bmatrix}
+		\mathbf{W}_{ij}^h \\
+		\mathbf{W}_{ij'}^h \\
+		\mathbf{W}_{i'j}^h \\
+		\mathbf{W}_{i'j'}^h
+	\end{bmatrix}
+	\end{align*}
+	其中，$k_{ij}$都是充分小于$1$的数.
+\end{corollary}
+综上，便说明了二维多重网格方法的收敛性.
+
+
+
+
+
+\end{large}
+\end{document}

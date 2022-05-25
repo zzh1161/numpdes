@@ -1,0 +1,273 @@
+!! FOR THE 1ST TESTING FUNCTION: 
+///////////////////////////////////////////////////
+
+! For The Regular Domin: 
+
+No.1
+when n = 8, 1-norm of error is: 0.00203806
+when n = 8, 2-norm of error is: 0.000979757
+when n = 8, inf-norm of error is: 0.000713907
+when n = 16, 1-norm of error is: 0.000986439
+when n = 16, 2-norm of error is: 0.000314313
+when n = 16, inf-norm of error is: 0.000156243
+when n = 32, 1-norm of error is: 0.000481015
+when n = 32, 2-norm of error is: 0.000105927
+when n = 32, inf-norm of error is: 3.675e-05
+when n = 64, 1-norm of error is: 0.000237115
+when n = 64, 2-norm of error is: 3.65733e-05
+when n = 64, inf-norm of error is: 8.89928e-06
+
+No.2
+when n = 8, 1-norm of error is: 0.0287087
+when n = 8, 2-norm of error is: 0.0127368
+when n = 8, inf-norm of error is: 0.00954259
+when n = 16, 1-norm of error is: 0.0112275
+when n = 16, 2-norm of error is: 0.00361008
+when n = 16, inf-norm of error is: 0.00207687
+when n = 32, 1-norm of error is: 0.00499464
+when n = 32, 2-norm of error is: 0.00114854
+when n = 32, inf-norm of error is: 0.000486224
+when n = 64, 1-norm of error is: 0.00235809
+when n = 64, 2-norm of error is: 0.000385649
+when n = 64, inf-norm of error is: 0.000117726
+
+No.3
+when n = 8, 1-norm of error is: 0.0534236
+when n = 8, 2-norm of error is: 0.0235603
+when n = 8, inf-norm of error is: 0.0170158
+when n = 16, 1-norm of error is: 0.0214377
+when n = 16, 2-norm of error is: 0.00679174
+when n = 16, inf-norm of error is: 0.00370531
+when n = 32, 1-norm of error is: 0.00965257
+when n = 32, 2-norm of error is: 0.00217846
+when n = 32, inf-norm of error is: 0.000867512
+when n = 64, 1-norm of error is: 0.00458538
+when n = 64, 2-norm of error is: 0.000734409
+when n = 64, inf-norm of error is: 0.000210047
+
+! For The Irregular Domin:
+
+No.1
+when n = 8, 1-norm of error is: 0.000515528
+when n = 8, 2-norm of error is: 0.000321185
+when n = 8, inf-norm of error is: 0.000484398
+when n = 16, 1-norm of error is: 0.000231921
+when n = 16, 2-norm of error is: 8.57369e-05
+when n = 16, inf-norm of error is: 7.30423e-05
+when n = 32, 1-norm of error is: 0.000114244
+when n = 32, 2-norm of error is: 2.94551e-05
+when n = 32, inf-norm of error is: 1.32204e-05
+when n = 64, 1-norm of error is: 5.78276e-05
+when n = 64, 2-norm of error is: 1.0584e-05
+when n = 64, inf-norm of error is: 3.39176e-06
+
+No.2
+when n = 8, 1-norm of error is: 0.00984642
+when n = 8, 2-norm of error is: 0.00507879
+when n = 8, inf-norm of error is: 0.00471488
+when n = 16, 1-norm of error is: 0.00372914
+when n = 16, 2-norm of error is: 0.00141041
+when n = 16, inf-norm of error is: 0.00107647
+when n = 32, 1-norm of error is: 0.00164286
+when n = 32, 2-norm of error is: 0.000442976
+when n = 32, inf-norm of error is: 0.000256925
+when n = 64, 1-norm of error is: 0.000765231
+when n = 64, 2-norm of error is: 0.000146782
+when n = 64, inf-norm of error is: 6.24026e-05
+
+No.3
+when n = 8, 1-norm of error is: 0.899454
+when n = 8, 2-norm of error is: 0.35012
+when n = 8, inf-norm of error is: 0.217818
+when n = 16, 1-norm of error is: 0.516738
+when n = 16, 2-norm of error is: 0.153652
+when n = 16, inf-norm of error is: 0.0721617
+when n = 32, 1-norm of error is: 0.368703
+when n = 32, 2-norm of error is: 0.0810323
+when n = 32, inf-norm of error is: 0.0318423
+when n = 64, 1-norm of error is: 0.334953
+when n = 64, 2-norm of error is: 0.0537717
+when n = 64, inf-norm of error is: 0.0147153
+
+!! FOR THE 2ND TESTING FUNCTION: 
+///////////////////////////////////////////////////
+
+! For The Regular Domin: 
+
+No.1
+when n = 8, 1-norm of error is: 0.000366633
+when n = 8, 2-norm of error is: 0.000172369
+when n = 8, inf-norm of error is: 0.000119539
+when n = 16, 1-norm of error is: 0.000179819
+when n = 16, 2-norm of error is: 5.56823e-05
+when n = 16, inf-norm of error is: 2.61814e-05
+when n = 32, 1-norm of error is: 8.79452e-05
+when n = 32, 2-norm of error is: 1.87928e-05
+when n = 32, inf-norm of error is: 6.17646e-06
+when n = 64, 1-norm of error is: 4.33824e-05
+when n = 64, 2-norm of error is: 6.49075e-06
+when n = 64, inf-norm of error is: 1.49821e-06
+
+No.2
+when n = 8, 1-norm of error is: 0.00572595
+when n = 8, 2-norm of error is: 0.00248577
+when n = 8, inf-norm of error is: 0.00186976
+when n = 16, 1-norm of error is: 0.00229841
+when n = 16, 2-norm of error is: 0.000719216
+when n = 16, inf-norm of error is: 0.000407668
+when n = 32, 1-norm of error is: 0.00103217
+when n = 32, 2-norm of error is: 0.000230862
+when n = 32, inf-norm of error is: 9.54724e-05
+when n = 64, 1-norm of error is: 0.000489496
+when n = 64, 2-norm of error is: 7.78433e-05
+when n = 64, inf-norm of error is: 2.31178e-05
+
+No.3
+when n = 8, 1-norm of error is: 0.00585159
+when n = 8, 2-norm of error is: 0.00253797
+when n = 8, inf-norm of error is: 0.00190105
+when n = 16, 1-norm of error is: 0.00235335
+when n = 16, 2-norm of error is: 0.000735311
+when n = 16, inf-norm of error is: 0.000414269
+when n = 32, 1-norm of error is: 0.00105914
+when n = 32, 2-norm of error is: 0.000236334
+when n = 32, inf-norm of error is: 9.70077e-05
+when n = 64, 1-norm of error is: 0.000502869
+when n = 64, 2-norm of error is: 7.97495e-05
+when n = 64, inf-norm of error is: 2.3489e-05
+
+! For The Irregular Domin:
+
+No.1
+when n = 8, 1-norm of error is: 7.03303e-05
+when n = 8, 2-norm of error is: 7.02674e-05
+when n = 8, inf-norm of error is: 9.89743e-05
+when n = 16, 1-norm of error is: 2.28184e-05
+when n = 16, 2-norm of error is: 1.31254e-05
+when n = 16, inf-norm of error is: 1.22428e-05
+when n = 32, 1-norm of error is: 6.9716e-06
+when n = 32, 2-norm of error is: 2.63643e-06
+when n = 32, inf-norm of error is: 1.61219e-06
+when n = 64, 1-norm of error is: 2.37587e-06
+when n = 64, 2-norm of error is: 6.14344e-07
+when n = 64, inf-norm of error is: 2.3733e-07
+
+No.2
+when n = 8, 1-norm of error is: 0.000261611
+when n = 8, 2-norm of error is: 0.000249722
+when n = 8, inf-norm of error is: 0.000358033
+when n = 16, 1-norm of error is: 0.000101533
+when n = 16, 2-norm of error is: 6.76248e-05
+when n = 16, inf-norm of error is: 9.38843e-05
+when n = 32, 1-norm of error is: 4.20421e-05
+when n = 32, 2-norm of error is: 2.05855e-05
+when n = 32, inf-norm of error is: 2.32333e-05
+when n = 64, 1-norm of error is: 1.90082e-05
+when n = 64, 2-norm of error is: 6.71804e-06
+when n = 64, inf-norm of error is: 5.74242e-06
+
+No.3
+when n = 8, 1-norm of error is: 0.0227054
+when n = 8, 2-norm of error is: 0.0128118
+when n = 8, inf-norm of error is: 0.00977785
+when n = 16, 1-norm of error is: 0.0131987
+when n = 16, 2-norm of error is: 0.0062158
+when n = 16, inf-norm of error is: 0.00588506
+when n = 32, 1-norm of error is: 0.0109632
+when n = 32, 2-norm of error is: 0.00394731
+when n = 32, inf-norm of error is: 0.0030329
+when n = 64, 1-norm of error is: 0.00956432
+when n = 64, 2-norm of error is: 0.00253507
+when n = 64, inf-norm of error is: 0.00155869
+
+!! FOR THE 3RD TESTING FUNCTION: 
+///////////////////////////////////////////////////
+
+! For The Regular Domin: 
+
+No.1
+when n = 8, 1-norm of error is: 1.03468e-15
+when n = 8, 2-norm of error is: 6.84845e-16
+when n = 8, inf-norm of error is: 9.99201e-16
+when n = 16, 1-norm of error is: 1.69762e-15
+when n = 16, 2-norm of error is: 1.05133e-15
+when n = 16, inf-norm of error is: 2.44249e-15
+when n = 32, 1-norm of error is: 6.07156e-15
+when n = 32, 2-norm of error is: 2.25898e-15
+when n = 32, inf-norm of error is: 4.88498e-15
+when n = 64, 1-norm of error is: 2.98187e-14
+when n = 64, 2-norm of error is: 1.67381e-14
+when n = 64, inf-norm of error is: 5.88418e-14
+
+No.2
+when n = 8, 1-norm of error is: 5.15866e-16
+when n = 8, 2-norm of error is: 2.37955e-16
+when n = 8, inf-norm of error is: 3.33067e-16
+when n = 16, 1-norm of error is: 1.21707e-14
+when n = 16, 2-norm of error is: 3.63509e-15
+when n = 16, inf-norm of error is: 2.33147e-15
+when n = 32, 1-norm of error is: 9.18311e-15
+when n = 32, 2-norm of error is: 2.65691e-15
+when n = 32, inf-norm of error is: 2.10942e-15
+when n = 64, 1-norm of error is: 7.32387e-14
+when n = 64, 2-norm of error is: 1.13791e-14
+when n = 64, inf-norm of error is: 3.55271e-15
+
+No.3
+when n = 8, 1-norm of error is: 2.51201e-15
+when n = 8, 2-norm of error is: 9.70023e-16
+when n = 8, inf-norm of error is: 6.66134e-16
+when n = 16, 1-norm of error is: 1.60553e-14
+when n = 16, 2-norm of error is: 4.60769e-15
+when n = 16, inf-norm of error is: 2.33147e-15
+when n = 32, 1-norm of error is: 7.29843e-14
+when n = 32, 2-norm of error is: 1.49317e-14
+when n = 32, inf-norm of error is: 5.44009e-15
+when n = 64, 1-norm of error is: 3.35439e-14
+when n = 64, 2-norm of error is: 6.74645e-15
+when n = 64, inf-norm of error is: 4.21885e-15
+
+! For The Irregular Domin:
+
+No.1
+when n = 8, 1-norm of error is: 3.4703e-15
+when n = 8, 2-norm of error is: 3.10723e-15
+when n = 8, inf-norm of error is: 5.88418e-15
+when n = 16, 1-norm of error is: 1.17399e-13
+when n = 16, 2-norm of error is: 7.21967e-14
+when n = 16, inf-norm of error is: 1.14742e-13
+when n = 32, 1-norm of error is: 9.30995e-13
+when n = 32, 2-norm of error is: 8.65391e-13
+when n = 32, inf-norm of error is: 3.20033e-12
+when n = 64, 1-norm of error is: 2.78576e-12
+when n = 64, 2-norm of error is: 1.38599e-12
+when n = 64, inf-norm of error is: 4.63907e-12
+
+No.2
+when n = 8, 1-norm of error is: 1.40043e-13
+when n = 8, 2-norm of error is: 1.25456e-13
+when n = 8, inf-norm of error is: 2.60291e-13
+when n = 16, 1-norm of error is: 6.78763e-12
+when n = 16, 2-norm of error is: 6.74596e-12
+when n = 16, inf-norm of error is: 2.22358e-11
+when n = 32, 1-norm of error is: 4.57356e-11
+when n = 32, 2-norm of error is: 5.94086e-11
+when n = 32, inf-norm of error is: 2.90419e-10
+when n = 64, 1-norm of error is: 1.90752e-09
+when n = 64, 2-norm of error is: 2.02197e-09
+when n = 64, inf-norm of error is: 1.37753e-08
+
+No.3
+when n = 8, 1-norm of error is: 0.191359
+when n = 8, 2-norm of error is: 0.0744244
+when n = 8, inf-norm of error is: 0.0482799
+when n = 16, 1-norm of error is: 0.103656
+when n = 16, 2-norm of error is: 0.0307469
+when n = 16, inf-norm of error is: 0.0149424
+when n = 32, 1-norm of error is: 0.122812
+when n = 32, 2-norm of error is: 0.0286453
+when n = 32, inf-norm of error is: 0.0130624
+when n = 64, 1-norm of error is: 0.106139
+when n = 64, 2-norm of error is: 0.0181115
+when n = 64, inf-norm of error is: 0.00602779
+

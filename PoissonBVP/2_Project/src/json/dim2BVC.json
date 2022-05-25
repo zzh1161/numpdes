@@ -1,0 +1,36 @@
+{
+    "BoundForOneDim":{
+        "Left":{
+            "Type": 0,
+            "CoeffiOfNeumann":   0,
+            "CoeffiOfDirichlet": 1
+        },
+        "Right":{
+            "Type": 0,
+            "CoeffiOfNeumann":   0,
+            "CoeffiOfDirichlet": 1
+        }
+    },
+    "BoundForTwoDim":{
+        "Left":{
+            "Type": 1,
+            "CoeffiOfNeumann":   1,
+            "CoeffiOfDirichlet": 0
+        },
+        "Right":{
+            "Type": 0,
+            "CoeffiOfNeumann":   0,
+            "CoeffiOfDirichlet": 1
+        },
+        "Upper":{
+            "Type": 0,
+            "CoeffiOfNeumann":   0,
+            "CoeffiOfDirichlet": 1
+        },
+        "Down":{
+            "Type": 0,
+            "CoeffiOfNeumann":   0,
+            "CoeffiOfDirichlet": 1
+        }
+    }
+}

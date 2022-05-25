@@ -1,0 +1,30 @@
+{
+    "BoundaryOfSquare":{
+        "left":  {
+            "BoundaryType" : 0,
+            "CoeffiOfNeum" : 0,
+            "CoeffiOfDirch": 1
+        },
+        "right": {
+            "BoundaryType" : 1,
+            "CoeffiOfNeum" : 1,
+            "CoeffiOfDirch": 1
+        },
+        "up":    {
+            "BoundaryType" : 1,
+            "CoeffiOfNeum" : 1,
+            "CoeffiOfDirch": 0
+        },
+        "down":  {
+            "BoundaryType" : 1,
+            "CoeffiOfNeum" : 1,
+            "CoeffiOfDirch": 0
+        }
+    },
+    "BoundaryOfDisk": {
+        "BoundaryType" : 0,
+        "CoeffiOfNeum" : 0,
+        "CoeffiOfDirch": 1
+    },
+    "ValueAt00": 0
+}
