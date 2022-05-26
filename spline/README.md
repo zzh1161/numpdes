@@ -18,55 +18,25 @@ Spline-->G(doc)-->作业报告与相关依赖文件
 Spline-->run.sh-->一个shell脚本,用于运行生成的可执行文件
 ```
 
+## 本地环境
+代码作者本地具有以下环境和软件：
++ Ubuntu 18.04
++ g++(GCC) 11.2.0 (C++20)
++ LAPACK 3.10.0
++ GNU Make 4.1
+
 ## 编译与运行
 
-+ 编译：
+编译：
 
-   + 在主目录下执行命令：
++ 执行`make`将在`bin`文件夹中生成对应的可执行文件;
++ 执行`make test`将在`bin`文件夹下生成测试文件对应的可执行文件`test`;
++ 执行`make latex`将编译`.tex`文件，生成pdf报告;
++  执行`make clean`清除生成的所有可执行文件和`output`下所有的存放输出结果的txt文件;
 
-      ```shell
-      make
-      ```
+运行：
 
-      将在`bin`文件夹中生成作业习题对应的可执行文件。
-
-   + 在主目录下执行命令：
-
-      ```shell
-      make test
-      ```
-
-      将在`bin`文件夹下生成测试文件对应的可执行文件`test`。
-
-  + 在主目录下执行命令：
-
-      ```shell
-      make latex
-      ```
-
-      将编译`.tex`文件，生成pdf报告。
-
-  +  在主目录下执行命令：
-
-      ```shell
-      make clean
-      ```
-
-      则会清除生成的所有可执行文件和`output`下所有的存放输出结果的txt文件。
-
-+ 运行：
-
-	执行命令`make`或`make test`完成编译后，继续执行命令：
-
-  ```shell
-  bash run.sh
-  ```
-
-  将通过shell的重定向方法，把程序的运行结果输出到`output`文件夹下的txt文件中，在`run.sh`文件中的命令如下：
-
-  ```shell
-  ./bin/exercise_B > ./output/exercise_B.txt
-  ```
++ 执行`bash run.sh`将通过shell的重定向方法，把程序的运行结果输出到`output`文件夹下的txt文件中;
 
 ## 类与方法说明
 
