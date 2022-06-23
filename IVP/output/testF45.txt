@@ -1,0 +1,8 @@
+!!! Fehlberg 4(5) embedded RK !!!
+Test for (10.198): 
+For T1, 
+When steps = 100, result = (0.993978,-8.9405e-05,0,-0.0145282,-2.00494,0); solution error is: 0.0145282; CPU time: 0.002566
+!!! Fehlberg 4(5) embedded RK !!!
+Test for (10.199): 
+For T2, 
+When steps = 100, result = (0.879992,-0.000189093,0,0.000912565,-0.380091,0); CPU time: 0.003359

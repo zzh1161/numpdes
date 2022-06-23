@@ -1,0 +1,36 @@
+!!! Adams-Bashforth !!!
+Test for (10.198): 
+For T1, p=1
+When steps = 100000, result = (0.926057,0.667777,0,0.511093,-0.270722,0); solution error is: 1.73086; CPU time: 0.06984
+When steps = 200000, result = (0.974542,0.42986,0,0.418089,-0.247742,0); solution error is: 1.75384; CPU time: 0.13657
+When steps = 400000, result = (0.99077,0.231926,0,0.413056,-0.256034,0); solution error is: 1.74555; CPU time: 0.274814
+For T1, p=2
+When steps = 100000, result = (0.934057,-0.0317998,0,0.699919,-0.00421746,0); solution error is: 1.99737; CPU time: 0.149734
+When steps = 200000, result = (0.977922,-0.0130261,0,-1.74667,-1.87174,0); solution error is: 1.74667; CPU time: 0.28029
+When steps = 400000, result = (0.989808,-0.00614818,0,-1.1663,-1.58627,0); solution error is: 1.1663; CPU time: 0.619726
+For T1, p=3
+When steps = 100000, result = (0.993325,-0.0019178,0,-0.343439,-2.03041,0); solution error is: 0.343439; CPU time: 0.246094
+When steps = 200000, result = (0.993907,-0.000320126,0,-0.0530195,-2.01422,0); solution error is: 0.0530195; CPU time: 0.481587
+When steps = 400000, result = (0.993987,-4.59727e-05,0,-0.00748589,-2.00358,0); solution error is: 0.00748589; CPU time: 0.979237
+For T1, p=4
+When steps = 100000, result = (0.994361,0.00149076,0,0.21655,-1.91225,0); solution error is: 0.21655; CPU time: 0.319536
+When steps = 200000, result = (0.994029,0.000100522,0,0.0162245,-1.99683,0); solution error is: 0.0162245; CPU time: 0.631233
+When steps = 400000, result = (0.994002,5.50961e-06,0,0.000895183,-2.00133,0); solution error is: 0.000895183; CPU time: 1.24927
+!!! Adams-Bashforth !!!
+Test for (10.199): 
+For T2, p=1
+When steps = 100000, result = (0.931112,-0.220058,0,0.188954,-0.231771,0); solution error is: 0.492388; CPU time: 0.095332
+When steps = 200000, result = (1.09534,0.0410828,0,0.324084,0.260618,0); solution error is: 0.0287115; CPU time: 0.14077
+When steps = 400000, result = (1.07412,0.0198006,0,0.352796,0.277523,0); solution error is: 0.521726; CPU time: 0.275011
+For T2, p=2
+When steps = 100000, result = (0.879947,-0.000158282,0,0.000718401,-0.380004,0); solution error is: 5.07413e-05; CPU time: 0.144727
+When steps = 200000, result = (0.879958,-0.00015437,0,0.000769142,-0.380025,0); solution error is: 1.29907e-05; CPU time: 0.274959
+When steps = 400000, result = (0.879961,-0.000153464,0,0.000782133,-0.38003,0); solution error is: 3.28579e-06; CPU time: 0.586418
+For T2, p=3
+When steps = 100000, result = (0.879961,-0.000152193,0,0.00078235,-0.38003,0); solution error is: 3.65036e-06; CPU time: 0.228645
+When steps = 200000, result = (0.879962,-0.000153053,0,0.000786,-0.380031,0); solution error is: 4.56276e-07; CPU time: 0.595268
+When steps = 400000, result = (0.879962,-0.000153161,0,0.000786456,-0.380032,0); solution error is: 5.70466e-08; CPU time: 0.901945
+For T2, p=4
+When steps = 100000, result = (0.879962,-0.000153176,0,0.000786522,-0.380032,0); solution error is: 2.64996e-10; CPU time: 0.269328
+When steps = 200000, result = (0.879962,-0.000153176,0,0.000786521,-0.380032,0); solution error is: 2.80018e-11; CPU time: 0.531225
+When steps = 400000, result = (0.879962,-0.000153176,0,0.000786521,-0.380032,0); solution error is: 2.93566e-12; CPU time: 1.20332

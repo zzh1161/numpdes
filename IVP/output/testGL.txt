@@ -1,0 +1,28 @@
+!!! Gauss-Legendre !!!
+Test for (10.198): 
+For T1, s = 1
+When steps = 10000, result = (-0.730455,0.187806,0,0.102471,-0.549584,0); solution error is: 1.72445; CPU time: 0.030273
+When steps = 20000, result = (0.559416,-0.442179,0,0.635067,0.0602038,0); solution error is: 2.06179; CPU time: 0.059341
+When steps = 40000, result = (0.895654,-0.0729687,0,0.569341,0.0145323,0); solution error is: 2.01612; CPU time: 0.118279
+For T1, s = 2
+When steps = 10000, result = (0.989918,-0.00556297,0,-1.18123,-1.67517,0); solution error is: 1.18123; CPU time: 0.067281
+When steps = 20000, result = (0.993831,-0.000470286,0,-0.0796395,-2.02398,0); solution error is: 0.0796395; CPU time: 0.131217
+When steps = 40000, result = (0.993989,-3.12873e-05,0,-0.0051198,-2.00322,0); solution error is: 0.0051198; CPU time: 0.2645
+For T1, s = 3
+When steps = 10000, result = (0.993946,-0.000168905,0,-0.02785,-2.00957,0); solution error is: 0.02785; CPU time: 0.108272
+When steps = 20000, result = (0.993999,-3.48738e-06,0,-0.000567874,-2.00175,0); solution error is: 0.000567874; CPU time: 0.206876
+When steps = 40000, result = (0.994,-1.08833e-06,0,-0.00017701,-2.00164,0); solution error is: 0.00017701; CPU time: 0.421443
+!!! Gauss-Legendre !!!
+Test for (10.199): 
+For T2, s = 1
+When steps = 10000, result = (0.880259,-4.7969e-05,0,0.00213534,-0.380574,0); solution error is: 0.00101314; CPU time: 0.032895
+When steps = 20000, result = (0.880036,-0.000126483,0,0.0011222,-0.380167,0); solution error is: 0.00025186; CPU time: 0.060697
+When steps = 40000, result = (0.879981,-0.000146479,0,0.000870341,-0.380065,0); solution error is: 5.69224e-05; CPU time: 0.115641
+For T2, s = 2
+When steps = 10000, result = (0.879962,-0.000153384,0,0.000787512,-0.380032,0); solution error is: 1.21977e-06; CPU time: 0.064675
+When steps = 20000, result = (0.879962,-0.000153108,0,0.000786292,-0.380032,0); solution error is: 2.07783e-07; CPU time: 0.125842
+When steps = 40000, result = (0.879962,-0.000153168,0,0.0007865,-0.380032,0); solution error is: 3.71141e-08; CPU time: 0.249428
+For T2, s = 3
+When steps = 10000, result = (0.879962,-0.000153411,0,0.000787581,-0.380032,0); solution error is: 1.19859e-06; CPU time: 0.102344
+When steps = 20000, result = (0.879962,-0.000153133,0,0.000786382,-0.380032,0); solution error is: 7.28449e-08; CPU time: 0.200617
+When steps = 40000, result = (0.879962,-0.000153158,0,0.000786455,-0.380032,0); solution error is: 8.14656e-08; CPU time: 0.387854

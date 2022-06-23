@@ -1,0 +1,8 @@
+!!! Dormand-Prince 5(4) embedded RK !!!
+Test for (10.198): 
+For T1, 
+When steps = 100, result = (0.993998,-5.48056e-06,0,-0.000894613,-2.00187,0); solution error is: 0.000894613; CPU time: 0.002883
+!!! Dormand-Prince 5(4) embedded RK !!!
+Test for (10.199): 
+For T2, 
+When steps = 100, result = (0.879963,-0.000154375,0,0.000790034,-0.380033,0); CPU time: 0.003704

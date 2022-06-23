@@ -1,0 +1,12 @@
+!!! ESDIRK !!!
+Test for (10.198): 
+For T1, 
+When steps = 10000, result = (0.984267,-0.00714386,0,-1.54671,-0.755117,0); solution error is: 1.54671; CPU time: 0.150363
+When steps = 20000, result = (0.993752,-0.000733959,0,-0.125585,-2.03015,0); solution error is: 0.125585; CPU time: 0.302757
+When steps = 40000, result = (0.993986,-4.67899e-05,0,-0.0076391,-2.0038,0); solution error is: 0.0076391; CPU time: 0.608633
+!!! ESDIRK !!!
+Test for (10.199): 
+For T2, 
+When steps = 10000, result = (0.879962,-0.000153182,0,0.000786549,-0.380032,0); solution error is: 2.74876e-08; CPU time: 0.173597
+When steps = 20000, result = (0.879962,-0.000153176,0,0.000786522,-0.380032,0); solution error is: 5.16898e-09; CPU time: 0.320531
+When steps = 40000, result = (0.879962,-0.000153175,0,0.000786517,-0.380032,0); solution error is: 2.44824e-09; CPU time: 0.615353

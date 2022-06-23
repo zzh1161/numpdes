@@ -1,0 +1,12 @@
+!!! Classical RK !!!
+Test for (10.198): 
+For T1, 
+When steps = 12000, result = (0.981777,-0.00546023,0,-0.944989,-0.239025,0); solution error is: 1.76256; CPU time: 0.03318
+When steps = 24000, result = (0.993578,-0.00116068,0,-0.204469,-2.04112,0); solution error is: 0.204469; CPU time: 0.065977
+When steps = 48000, result = (0.993979,-6.65554e-05,0,-0.0108932,-2.00481,0); solution error is: 0.0108932; CPU time: 0.131309
+!!! Classical RK !!!
+Test for (10.199): 
+For T2, 
+When steps = 12000, result = (0.879962,-0.000153174,0,0.000786524,-0.380032,0); solution error is: 2.11243e-09; CPU time: 0.032481
+When steps = 24000, result = (0.879962,-0.000153176,0,0.000786522,-0.380032,0); solution error is: 3.30833e-10; CPU time: 0.064679
+When steps = 48000, result = (0.879962,-0.000153176,0,0.000786521,-0.380032,0); solution error is: 2.41786e-11; CPU time: 0.13013
