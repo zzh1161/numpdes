@@ -31,7 +31,7 @@
 
 + g++(GCC) 11.2.0 (C++20) 
 
-  因为使用了`<optional>`，请使用**版本在 7.1(C++17) 及以上的g++(GCC)**编译.
+  因为使用了`<optional>`，请使用 **版本在 7.1(C++17) 及以上的g++(GCC)** 编译.
 
 + Lapack 3.10.0
 
@@ -77,10 +77,8 @@
       ondisk     = 5, // points on the disk's boundary
       insquare   = 6, // points inside the square
       offsquare  = 7, // points off the square
-      onXaxis    = 8, // points on a line paralleled to X-axis,
-     				  // with the line being part of the grid.
-      onYaxis    = 9, // points on a line paralleled to Y-axis
-      				  // with the line being part of the grid.
+      onXaxis    = 8, // points on a line paralleled to X-axis, with the line being part of the grid.
+      onYaxis    = 9, // points on a line paralleled to Y-axis, with the line being part of the grid.
       unknown    = 10
   };
   ```
