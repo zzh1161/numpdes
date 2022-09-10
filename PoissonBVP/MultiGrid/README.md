@@ -62,10 +62,13 @@
 ### 实现思路
 
 + 首先，Dirichlet、Neumann、Mixed三种边值条件其实可归结为一种，即Mixed. 通过获取第三边值条件中的系数a、b，
+
   $$
   a\frac{\partial U}{\partial \vec{n}}+bU = \sigma
   $$
+  
   利用边界点附近的三个点推导二阶准确表达式，
+
   $$
   \left(\frac{3a}{2h}+b \right)U_0 - \frac{2a}{h}U_1 + \frac{a}{2h}U_2 = \sigma
   $$
