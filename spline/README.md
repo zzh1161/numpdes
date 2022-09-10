@@ -1,8 +1,5 @@
 <h1 align = "center">文件与程序说明</h1>
 
-<center>张卓涵</center>
-<center>3190101161</center>
-
 ## 文件结构说明
 
 ```mermaid
