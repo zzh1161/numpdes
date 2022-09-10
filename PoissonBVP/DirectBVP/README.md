@@ -78,9 +78,9 @@
       insquare   = 6, // points inside the square
       offsquare  = 7, // points off the square
       onXaxis    = 8, // points on a line paralleled to X-axis,
-     								  // with the line being part of the grid.
+     				  // with the line being part of the grid.
       onYaxis    = 9, // points on a line paralleled to Y-axis
-      							  // with the line being part of the grid.
+      				  // with the line being part of the grid.
       unknown    = 10
   };
   ```
@@ -100,10 +100,12 @@
   + "BoundaryOfSquare"代表方形区域边界上的边值条件，"BoundaryOfDisk"代表圆上的边值条件.
   
   + "BoundaryType"代表边值类型，"CoeffiOfNeum"和"CoeffiOfDirch"分别表示Mixed边值条件
+
     $$
      a\frac{\partial U}{\partial \vec{n}}+bU=g(x,y)
     $$
-    中的系数$a$和$b$.
+
+    中的系数 $a$ 和 $b$ .
   
   + "ValueAt00"表示函数在$(0,0)$点的值，如果所有边界条件都是Neumann的话，解是不唯一的，此时需要给定一个点处的值。
   
